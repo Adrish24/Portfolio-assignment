@@ -1,0 +1,648 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(41, 38, 38);
+  font-family: "Fira Code", sans-serif;
+}
+
+/* header style */
+header {
+  position: fixed;
+  background-color: rgb(22, 21, 21);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  padding: 8px 16px;
+  z-index: 100;
+}
+
+.logo {
+  text-align: center;
+  display: flex;
+}
+
+.capital-A {
+  background-color: gray;
+  padding: 2px 4px;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.letters {
+  align-self: center;
+  font-size: x-large;
+  font-weight: 200;
+  color: antiquewhite;
+  font-style: italic;
+}
+
+/* theme toggle button */
+.toggle {
+  display: block;
+  position: relative;
+  background-color: whitesmoke;
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  border-radius: 50%;
+}
+
+.toggle > input {
+  position: absolute;
+  inset: 6px 6px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 10;
+}
+
+.light,
+.dark {
+  position: absolute;
+  inset: 6px 6px;
+  width: 28px;
+  height: 28px;
+}
+
+.light {
+  display: none;
+}
+
+/* handling toggle theme on checked */
+.toggle > input:checked ~ .dark {
+  display: none;
+}
+.toggle > input:checked ~ .light {
+  display: block;
+}
+
+/* navigation menu styles */
+.nav-container {
+  display: block;
+}
+
+/* section style */
+section {
+  scroll-margin-top: 5rem;
+  padding-top: 5rem;
+  min-height: 100vh;
+  color: white;
+  border-bottom: 1px solid white;
+  overflow: hidden;
+  display: grid;
+  justify-items: center;
+}
+
+/* home section style */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.hero > figure {
+  margin-bottom: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* profile background styles*/
+.p-bg {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.p-bg-one {
+  animation: clockwise 5s linear infinite;
+  background-color: rgb(65, 63, 63);
+  width: 300px;
+  height: 264px;
+}
+.p-bg-two {
+  animation: clockwise 4s linear infinite;
+  background-color: rgb(92, 89, 89);
+  width: 284px;
+  height: 264px;
+}
+.p-bg-three {
+  animation: clockwise 2s linear infinite;
+  background-color: rgb(143, 140, 140);
+  width: 280px;
+  height: 264px;
+}
+
+/* animation  */
+@keyframes clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hero > figure > img {
+  width: 256px;
+  height: 256px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.intro > div:first-child {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.intro > div:nth-child(2) {
+  font-size: 2rem;
+  font-weight: 700;
+  color: wheat;
+}
+
+.intro > div:nth-child(3) {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(201, 130, 104);
+}
+
+/* social icons style */
+.social-icons {
+  width: 100%;
+  padding: 8px 0;
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.social-icons > a {
+  text-decoration: none;
+}
+
+.social-icons > a > svg {
+  padding: 8px;
+  border: 3px solid white;
+  border-radius: 50%;
+  width: 48px;
+  height: 100%;
+  fill: white;
+}
+
+.linkedIn:hover > svg {
+  fill: navy;
+  border: 3px solid navy;
+}
+
+.facebook:hover > svg {
+  fill: blue;
+  border: 3px solid blue;
+}
+
+.github:hover > svg {
+  fill: wheat;
+  border: 3px solid wheat;
+}
+
+.reddit:hover > svg {
+  fill: orangered;
+  border: 3px solid orangered;
+}
+
+/* applying animation to social icons */
+/* delay increase by 100ms to give sequential effect */
+.linkedIn {
+  transform: translateX(200%);
+  opacity: 0;
+  animation: fadeIn 1s 300ms ease-in-out forwards;
+}
+.facebook {
+  transform: translateX(200%);
+  opacity: 0;
+  animation: fadeIn 1s 400ms ease-in-out forwards;
+}
+.github {
+  transform: translateX(200%);
+  opacity: 0;
+  animation: fadeIn 1s 500ms ease-in-out forwards;
+}
+.reddit {
+  transform: translateX(200%);
+  opacity: 0;
+  animation: fadeIn 1s 600ms ease-in-out forwards;
+}
+
+/* social icons fade-in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* resume download button */
+.resume-btn {
+  align-self: start;
+  padding: 12px 16px;
+  background-color: aquamarine;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.resume-btn:hover {
+  background-color: rgba(103, 253, 203, 0.904);
+}
+
+.resume-btn > a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+/* about section */
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.about-container > figure > img {
+  width: 256px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.about-content {
+  padding: 8px;
+}
+.about-content > h2 {
+  margin-bottom: 8px;
+}
+
+.about-content > p {
+  text-wrap: balance;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.about-content > button {
+  padding: 8px 16px;
+  background-color: aquamarine;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.about-content > button:hover {
+  background-color: rgba(103, 253, 203, 0.904);
+  cursor: pointer;
+}
+
+/* skills section */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  width: 100%;
+}
+
+.skills-container > h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.progressbar-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.progressbar-wrapper > img {
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  background-color: rgb(78, 78, 78);
+}
+
+.progressbar {
+  height: 10px;
+  background-color: grey;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+/* width is set to zero because of animation */
+.html {
+  background-color: rgb(228, 109, 66);
+  width: 0%;
+  height: 100%;
+}
+
+.css {
+  background-color: rgb(73, 137, 233);
+  width: 0%;
+}
+
+.javascript {
+  background-color: rgb(252, 181, 27);
+  width: 0%;
+}
+
+.tailwindcss {
+  background-color: rgb(78, 178, 245);
+  width: 0%;
+}
+
+/* certification section style*/
+.certifcation-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 100%;
+}
+
+.certifcation-container > h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.certificates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  position: relative;
+  width: 300px;
+}
+
+.card > figure{
+  display: flex;
+}
+
+.card > figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  background-color: rgb(77, 76, 76);
+  padding: 12px;
+}
+
+.card-body > h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card-body > p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.card-body > a {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.card-body > a > img {
+  width: 24px;
+  height: 24px;
+}
+
+/* media query for smaller devices */
+@media (min-width: 360px) and (max-width: 1024px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    background-color: black;
+    border-radius: 5px;
+    z-index: 150;
+  }
+
+  .menu > input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+  }
+
+  .menu-icon {
+    fill: white;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  /* creates dropdown effect on click */
+  .menu > input:checked ~ .menu-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 42px;
+    padding: 8px 0;
+    background-color: rgb(17, 17, 17);
+    border-radius: 10px;
+    z-index: 101;
+  }
+
+  .menu-list > li {
+    display: inline-flex;
+  }
+
+  .menu-list > li > a {
+    flex: 1;
+    text-decoration: none;
+    color: white;
+    font-size: small;
+    padding: 8px 16px;
+  }
+
+  .menu-list > li:hover {
+    background-color: rgba(61, 60, 60, 0.377);
+  }
+}
+
+/* media query for laptop/desktop */
+@media (min-width: 1025px) {
+  .menu {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: block;
+  }
+
+  .desktop-nav > ul {
+    display: flex;
+    list-style: none;
+  }
+
+  .desktop-nav > ul > li {
+    cursor: pointer;
+    padding: 8px 16px;
+  }
+
+  .desktop-nav > ul > li:hover {
+    background-color: rgba(61, 60, 60, 0.377);
+    scale: 1.1;
+  }
+  .desktop-nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  /* resume download button */
+  .resume-btn {
+    align-self: center;
+  }
+
+  /* adjusting about section */
+  .about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 10rem;
+  }
+
+  .about-container > figure > img {
+    width: 256px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 0;
+    margin-right: 16px;
+  }
+
+  .about-content > h2 {
+    margin-bottom: 8px;
+  }
+
+  .about-content {
+    padding: 8px;
+  }
+
+  .about-content > p {
+    text-wrap: balance;
+    font-size: 12px;
+    margin-bottom: 24px;
+  }
+
+  /* adjusting skills section */
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10rem;
+    width: 100%;
+  }
+
+  .skills-container > h2 {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .progressbar-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px;
+    width: 500px;
+  }
+
+  .progressbar-wrapper > img {
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+  }
+
+  .progressbar {
+    height: 10px;
+    background-color: grey;
+  }
+
+  /* adjusting certifications */
+  .certifcation-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10rem;
+    width: 100%;
+  }
+
+  .certificates {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .card {
+    width: 350px;
+  }
+}

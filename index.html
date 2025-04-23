@@ -1,11 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/public/portfolio.png" type="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font style for the entire html doc -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
     <title>Portfolio</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- logo -->
+      <div class="logo">
+        <span class="capital-A">A</span>
+        <span class="letters">drish</span>
+      </div>
+
+      <!-- Toggle theme -->
+      <div class="toggle">
+        <input type="checkbox" checked />
+        <svg
+          class="light"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
+          />
+        </svg>
+        <svg
+          class="dark"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
+          />
+        </svg>
+      </div>
+
+      <nav class="nav-container">
+        <!-- visible when in smaller devices -->
+        <div class="menu">
+          <input type="checkbox" />
+          <svg
+            class="menu-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
+            />
+          </svg>
+
+          <ul class="menu-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li>
+              <a href="#certifications">certifications</a>
+            </li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contacts</a></li>
+          </ul>
+        </div>
+
+        <!-- for laptop/desltop -->
+        <div class="desktop-nav">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contacts</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- home section -->
+      <section id="home">
+        <div class="hero">
+          <figure>
+            <div class="p-bg p-bg-one"></div>
+            <div class="p-bg p-bg-two"></div>
+            <div class="p-bg p-bg-three"></div>
+            <img
+              src="https://res.cloudinary.com/dwrgejdob/image/upload/v1714890394/lnnzma2kwc72rqknrzbs.jpg"
+              alt="profile"
+            />
+          </figure>
+          <!-- introduction -->
+          <div class="intro">
+            <div>Hi, I am</div>
+            <div>Adrish Kumar Ghosh</div>
+            <div>I am a full-stack web developer</div>
+          </div>
+          <!-- social media links -->
+          <div class="social-icons">
+            <a href="#" class="linkedIn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="512"
+                height="512"
+                viewBox="0 0 50 50"
+              >
+                <path
+                  d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="facebook">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                id="Capa_1"
+                x="0px"
+                y="0px"
+                viewBox="0 0 24 24"
+                style="enable-background: new 0 0 24 24"
+                xml:space="preserve"
+                width="512"
+                height="512"
+              >
+                <g>
+                  <path
+                    d="M24,12.073c0,5.989-4.394,10.954-10.13,11.855v-8.363h2.789l0.531-3.46H13.87V9.86c0-0.947,0.464-1.869,1.95-1.869h1.509   V5.045c0,0-1.37-0.234-2.679-0.234c-2.734,0-4.52,1.657-4.52,4.656v2.637H7.091v3.46h3.039v8.363C4.395,23.025,0,18.061,0,12.073   c0-6.627,5.373-12,12-12S24,5.445,24,12.073z"
+                  />
+                </g>
+              </svg>
+            </a>
+            <a href="#" class="github">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                id="Capa_1"
+                x="0px"
+                y="0px"
+                viewBox="0 0 24 24"
+                style="enable-background: new 0 0 24 24"
+                xml:space="preserve"
+                width="512"
+                height="512"
+              >
+                <g>
+                  <path
+                    style="fill-rule: evenodd; clip-rule: evenodd"
+                    d="M12,0.296c-6.627,0-12,5.372-12,12c0,5.302,3.438,9.8,8.206,11.387   c0.6,0.111,0.82-0.26,0.82-0.577c0-0.286-0.011-1.231-0.016-2.234c-3.338,0.726-4.043-1.416-4.043-1.416   C4.421,18.069,3.635,17.7,3.635,17.7c-1.089-0.745,0.082-0.729,0.082-0.729c1.205,0.085,1.839,1.237,1.839,1.237   c1.07,1.834,2.807,1.304,3.492,0.997C9.156,18.429,9.467,17.9,9.81,17.6c-2.665-0.303-5.467-1.332-5.467-5.93   c0-1.31,0.469-2.381,1.237-3.221C5.455,8.146,5.044,6.926,5.696,5.273c0,0,1.008-0.322,3.301,1.23   C9.954,6.237,10.98,6.104,12,6.099c1.02,0.005,2.047,0.138,3.006,0.404c2.29-1.553,3.297-1.23,3.297-1.23   c0.653,1.653,0.242,2.873,0.118,3.176c0.769,0.84,1.235,1.911,1.235,3.221c0,4.609-2.807,5.624-5.479,5.921   c0.43,0.372,0.814,1.103,0.814,2.222c0,1.606-0.014,2.898-0.014,3.293c0,0.319,0.216,0.694,0.824,0.576   c4.766-1.589,8.2-6.085,8.2-11.385C24,5.669,18.627,0.296,12,0.296z"
+                  />
+                  <path
+                    d="M4.545,17.526c-0.026,0.06-0.12,0.078-0.206,0.037c-0.087-0.039-0.136-0.121-0.108-0.18   c0.026-0.061,0.12-0.078,0.207-0.037C4.525,17.384,4.575,17.466,4.545,17.526L4.545,17.526z"
+                  />
+                  <path
+                    d="M5.031,18.068c-0.057,0.053-0.169,0.028-0.245-0.055c-0.079-0.084-0.093-0.196-0.035-0.249   c0.059-0.053,0.167-0.028,0.246,0.056C5.076,17.903,5.091,18.014,5.031,18.068L5.031,18.068z"
+                  />
+                  <path
+                    d="M5.504,18.759c-0.074,0.051-0.194,0.003-0.268-0.103c-0.074-0.107-0.074-0.235,0.002-0.286   c0.074-0.051,0.193-0.005,0.268,0.101C5.579,18.579,5.579,18.707,5.504,18.759L5.504,18.759z"
+                  />
+                  <path
+                    d="M6.152,19.427c-0.066,0.073-0.206,0.053-0.308-0.046c-0.105-0.097-0.134-0.234-0.068-0.307   c0.067-0.073,0.208-0.052,0.311,0.046C6.191,19.217,6.222,19.355,6.152,19.427L6.152,19.427z"
+                  />
+                  <path
+                    d="M7.047,19.814c-0.029,0.094-0.164,0.137-0.3,0.097C6.611,19.87,6.522,19.76,6.55,19.665   c0.028-0.095,0.164-0.139,0.301-0.096C6.986,19.609,7.075,19.719,7.047,19.814L7.047,19.814z"
+                  />
+                  <path
+                    d="M8.029,19.886c0.003,0.099-0.112,0.181-0.255,0.183c-0.143,0.003-0.26-0.077-0.261-0.174c0-0.1,0.113-0.181,0.256-0.184   C7.912,19.708,8.029,19.788,8.029,19.886L8.029,19.886z"
+                  />
+                  <path
+                    d="M8.943,19.731c0.017,0.096-0.082,0.196-0.224,0.222c-0.139,0.026-0.268-0.034-0.286-0.13   c-0.017-0.099,0.084-0.198,0.223-0.224C8.797,19.574,8.925,19.632,8.943,19.731L8.943,19.731z"
+                  />
+                </g>
+              </svg>
+            </a>
+            <a href="#" class="reddit">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                id="Capa_1"
+                x="0px"
+                y="0px"
+                viewBox="0 0 24 24"
+                style="enable-background: new 0 0 24 24"
+                xml:space="preserve"
+                width="512"
+                height="512"
+              >
+                <g>
+                  <path
+                    d="M9.25,14.5C8.561,14.5,8,13.939,8,13.25C8,12.561,8.561,12,9.25,12c0.689,0,1.25,0.561,1.25,1.25   C10.5,13.939,9.939,14.5,9.25,14.5z"
+                  />
+                  <path
+                    d="M14.97,16.095c0.127,0.127,0.126,0.332,0,0.458c-0.853,0.852-2.488,0.918-2.969,0.918c-0.481,0-2.116-0.066-2.968-0.918   c-0.127-0.127-0.127-0.331,0-0.458c0.127-0.127,0.331-0.127,0.458,0c0.538,0.538,1.688,0.728,2.51,0.728   c0.822,0,1.972-0.191,2.511-0.729C14.639,15.968,14.844,15.968,14.97,16.095z"
+                  />
+                  <path
+                    d="M16,13.25c0,0.69-0.561,1.25-1.25,1.25c-0.69,0-1.25-0.561-1.25-1.25c0-0.689,0.561-1.25,1.25-1.25   C15.439,12,16,12.561,16,13.25z"
+                  />
+                  <path
+                    d="M12,0C5.373,0,0,5.373,0,12s5.373,12,12,12s12-5.373,12-12S18.627,0,12,0z M18.957,13.599   c0.027,0.173,0.041,0.348,0.041,0.526c0,2.692-3.134,4.875-7,4.875c-3.866,0-7-2.183-7-4.875c0-0.179,0.015-0.355,0.042-0.529   C4.431,13.322,4.006,12.711,4.006,12c0-0.967,0.783-1.75,1.75-1.75c0.47,0,0.896,0.186,1.21,0.488   c1.212-0.873,2.886-1.431,4.749-1.483l0.89-4.185c0.017-0.081,0.066-0.152,0.135-0.197c0.069-0.045,0.154-0.061,0.235-0.044   l2.908,0.618C16.088,5.036,16.509,4.75,17,4.75c0.69,0,1.25,0.56,1.25,1.25S17.69,7.25,17,7.25c-0.67,0-1.213-0.529-1.244-1.191   l-2.604-0.554l-0.797,3.75c1.836,0.064,3.484,0.622,4.68,1.485c0.315-0.303,0.742-0.491,1.214-0.491c0.967,0,1.75,0.783,1.75,1.75   C19.998,12.714,19.57,13.327,18.957,13.599z"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
+          <button class="resume-btn">
+            <a href="#">Resume</a>
+          </button>
+        </div>
+      </section>
+
+      <!-- about section -->
+      <section id="about">
+        <div class="about-container">
+          <figure>
+            <img
+              src="https://res.cloudinary.com/dwrgejdob/image/upload/v1714890394/lnnzma2kwc72rqknrzbs.jpg"
+              alt="profile"
+            />
+          </figure>
+          <div class="about-content">
+            <h2>About me</h2>
+            <p>
+              Innovative solutions through code. Specializing in web
+              development, I love crafting intuitive, responsive, and
+              user-friendly applications. Whether it's designing sleek frontends
+              or engineering backend systems, I enjoy every step of the process.
+              I'm always eager to explore new technologies, frameworks, and
+              tools.Staying curious is what keeps me growing. For me,
+              development isn’t just about writing code, it’s about solving real
+              problems and creating meaningful digital experiences.
+            </p>
+            <button>Read more</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- skills -->
+      <section id="skills">
+        <div class="skills-container">
+          <h2>My skills</h2>
+
+          <!-- progress bar -->
+          <div class="progressbar-wrapper">
+            <img src="/public/html.png" alt="html" />
+            <div class="progressbar">
+              <div class="progress html"></div>
+            </div>
+          </div>
+          <div class="progressbar-wrapper">
+            <img src="/public/css.png" alt="css" />
+            <div class="progressbar">
+              <div class="progress css"></div>
+            </div>
+          </div>
+          <div class="progressbar-wrapper">
+            <img src="/public/javascript.png" alt="javascript" />
+            <div class="progressbar">
+              <div class="progress javascript"></div>
+            </div>
+          </div>
+          <div class="progressbar-wrapper">
+            <img src="/public/tailwindcss.svg" alt="tailwindcss" />
+            <div class="progressbar">
+              <div class="progress tailwindcss"></div>
+            </div>
+          </div>
+        </div>
+        <!-- handling progress loading animation -->
+        <script>
+          const skillsSection = document.getElementById("skills");
+          const skills = [
+            {
+              element: skillsSection.querySelector(".html"),
+              target: 80,
+            },
+            {
+              element: skillsSection.querySelector(".css"),
+              target: 70,
+            },
+            {
+              element: skillsSection.querySelector(".javascript"),
+              target: 90,
+            },
+            {
+              element: skillsSection.querySelector(".tailwindcss"),
+              target: 85,
+            },
+          ];
+          let entredScreenOnce = false;
+          // when in viewport progress bar will load
+          const skillsObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting && !entredScreenOnce) {
+                  entredScreenOnce = true;
+                  skills.forEach((skill) => {
+                    let currentPorgress = 0;
+                    const interval = setInterval(() => {
+                      if (currentPorgress >= skill.target) {
+                        clearInterval(interval);
+                      }
+                      currentPorgress++;
+                      skill.element.style.width = `${currentPorgress}%`;
+                    }, 50);
+                  });
+                }
+              });
+            },
+            { threshold: 0.5 }
+          );
+          skillsObserver.observe(skillsSection);
+        </script>
+      </section>
+
+      <!-- certifications -->
+      <section id="certifications">
+        <div class="certifcation-container">
+          <h2>Certifications</h2>
+          <div class="certificates">
+            <!-- certifcate -->
+            <div class="card">
+              <figure>
+                <img width="40px" src="/public/certificate.PNG" alt="certificate" />
+              </figure>
+              <div class="card-body">
+                <h2>Full stack development Let's begin</h2>
+                <p>
+                  Successfully completed a foundational course in Full Stack
+                  Development as a part of Full Stack Development with DSA.
+                </p>
+                <a href="/public/certificate.PNG" target="_blank">
+                  <img src="/public/zoom-in.png" alt="view" />
+                </a>
+              </div>
+            </div>
+            <div class="card">
+              <figure>
+                <img width="40px" src="/public/certificate.PNG" alt="" />
+              </figure>
+              <div class="card-body">
+                <h2>Certification of training</h2>
+                <p>
+                  Successfully completed a foundational course in Full Stack
+                  Development as a part of Full Stack Development with DSA.
+                </p>
+                <a href="/public/certificate.PNG" target="_blank">
+                  <img src="/public/zoom-in.png" alt="view" />
+                </a>
+              </div>
+            </div>
+            <div class="card">
+              <figure>
+                <img width="40px" src="/public/certificate.PNG" alt="" />
+              </figure>
+              <div class="card-body">
+                <h2>Certification of training</h2>
+                <p>
+                  Successfully completed a foundational course in Full Stack
+                  Development as a part of Full Stack Development with DSA.
+                </p>
+                <a href="/public/certificate.PNG" target="_blank">
+                  <img src="/public/zoom-in.png" alt="view" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects">Projects</section>
+      <section id="contact">Contact</section>
+    </main>
+    <footer></footer>
+  </body>
 </html>
