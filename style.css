@@ -101,7 +101,6 @@ section {
   padding-top: 5rem;
   min-height: 100vh;
   color: white;
-  border-bottom: 1px solid white;
   overflow: hidden;
   display: grid;
   justify-items: center;
@@ -292,6 +291,7 @@ section {
 .about-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 16px;
 }
@@ -404,8 +404,8 @@ section {
 
 .certificates {
   display: flex;
+  margin: auto;
   flex-direction: column;
-  align-items: center;
   gap: 16px;
 }
 
@@ -417,7 +417,7 @@ section {
   width: 300px;
 }
 
-.card > figure{
+.card > figure {
   display: flex;
 }
 
@@ -455,6 +455,189 @@ section {
 .card-body > a > img {
   width: 24px;
   height: 24px;
+}
+
+/* project section style */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 100%;
+}
+
+.projects-container > h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.project-list {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-list > .card > figure {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.project-list > .card > .card-body {
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+}
+
+.project-list > .card > .card-body > h2 {
+  margin: 0;
+}
+
+.website > a {
+  text-decoration: none;
+  background-color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.website > a > img {
+  width: 16px;
+}
+
+/* contact section style */
+#contact {
+  min-height: 80vh;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 100%;
+}
+
+.contact-container > h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* contact form */
+form {
+  margin: 0 auto;
+}
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: none;
+  border-radius: 5px;
+  background: rgb(29, 29, 29);
+}
+
+.fieldset > div {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.fieldset > div > label {
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+}
+
+/* adding star to signify required */
+.fieldset > div > label::after {
+  content: "*";
+  font-size: 12px;
+  position: absolute;
+  top: -2px;
+  color: red;
+}
+
+.fieldset > div > input {
+  height: 36px;
+  padding: 4px 8px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: rgb(58, 58, 58);
+  color: white;
+}
+
+.fieldset > div > input::placeholder {
+  color: rgb(128, 126, 126);
+}
+
+.fieldset > div > textarea {
+  padding: 4px 8px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: rgb(58, 58, 58);
+  color: white;
+  resize: vertical;
+  max-height: 200px;
+  height: 100px;
+}
+
+.fieldset > div > button {
+  margin: 0 auto;
+  padding: 8px;
+  background-color: aquamarine;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.fieldset > div > button:hover {
+  background-color: rgb(98, 247, 197);
+}
+
+/* footer style */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  background: rgb(49, 49, 49);
+  padding: 8px 16px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.links > a {
+  display: flex;
+  background-color: rgb(31, 31, 31);
+  border-radius: 50%;
+}
+.links > a:hover {
+  background-color: rgb(26, 26, 26);
+}
+
+.links > a > img {
+  width: 36px;
+  width: 36px;
+  padding: 8px;
+}
+
+.footer-container > p {
+  font-size: 12px;
+  color: white;
+  align-self: center;
 }
 
 /* media query for smaller devices */
@@ -529,7 +712,7 @@ section {
   .menu {
     display: none;
   }
-
+/* navigation link style */
   .desktop-nav {
     display: block;
   }
@@ -541,14 +724,17 @@ section {
 
   .desktop-nav > ul > li {
     cursor: pointer;
-    padding: 8px 16px;
   }
-
   .desktop-nav > ul > li:hover {
-    background-color: rgba(61, 60, 60, 0.377);
     scale: 1.1;
   }
+
+  .desktop-nav > ul > li > a:hover {
+    background-color: rgba(61, 60, 60, 0.377);
+  }
+
   .desktop-nav > ul > li > a {
+    padding: 8px 16px;
     text-decoration: none;
     color: white;
   }
@@ -630,7 +816,6 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 10rem;
     width: 100%;
   }
 
@@ -639,10 +824,50 @@ section {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
     gap: 16px;
   }
 
   .card {
     width: 350px;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  /* adjusting projects */
+  .projects-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .project-list {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .project-list > .card > figure {
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .project-list > .card > .card-body {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%);
+    background: linear-gradient(to bottom, transparent, black);
+  }
+
+  .project-list > .card:hover > .card-body {
+    transform: translateY(0);
+    transition: transform 300ms ease-in-out;
+  }
+
+  /* adjusting form field */
+  .fieldset > div {
+    width: 500px;
   }
 }
